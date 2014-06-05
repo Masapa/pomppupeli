@@ -421,7 +421,7 @@ Transform:
   m_LocalScale: {x: 3.18253899, y: 3.18253589, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1 &743951465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,14 +1040,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441c9ed31b88df4b8fd7d7ebee480c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathy: -50
   tuplaaika: .25
   speed: 0
   jumpSpeed: 1500
   Maa: {fileID: 100000, guid: 7e1b3b874f4d88544bfbb2e4a0be2e67, type: 2}
   gravity: 1.39999998
   maxTorque1: 3000
-  minTorque1: 1000
   PlayerElamant: 0
+  minTorque1: 1000
   pyoriminen: 80
   CP: {fileID: 0}
   currentCheckPoint: {x: 0, y: 0, z: 0}
@@ -1274,8 +1275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 0}
   player: {fileID: 0}
-  smoothTime: .600000024
-  smoothTimex: 0
+  smoothTime: .300000012
+  smoothTimex: .600000024
   cameraFollowX: 1
   cameraFollowY: 1
   cameraFollowHeight: 1
@@ -1863,7 +1864,7 @@ Transform:
   m_LocalScale: {x: 1.71747887, y: 1.37368643, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1001 &1938450180
 Prefab:
   m_ObjectHideFlags: 0
