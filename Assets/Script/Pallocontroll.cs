@@ -201,7 +201,7 @@ public class Pallocontroll : MonoBehaviour {
 			
 		}	
 	}
-	
+	//testiii
 	void OnCollisionExit2D(Collision2D c){
 		
 		if(c.collider.tag == "Maa"){
