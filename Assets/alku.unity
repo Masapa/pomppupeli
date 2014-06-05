@@ -126,7 +126,7 @@ MonoBehaviour:
   cameraTarget: {fileID: 0}
   player: {fileID: 0}
   smoothTime: .600000024
-  smoothTimex: 0
+  smoothTimex: .600000024
   cameraFollowX: 1
   cameraFollowY: 1
   cameraFollowHeight: 1
@@ -313,7 +313,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.35787964
+      value: -18.4264412
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_LocalPosition.y
@@ -358,6 +358,10 @@ Prefab:
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
@@ -543,8 +547,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2, y: 8}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 2.49864697, y: 3.88463593}
+  m_Center: {x: 1.24932098, y: -.619283676}
 --- !u!114 &768830313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +568,7 @@ Transform:
   m_PrefabInternal: {fileID: 437234728}
   m_GameObject: {fileID: 768830311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.35787964, y: 23.0695801, z: 0}
+  m_LocalPosition: {x: -18.4264412, y: 23.0695801, z: 0}
   m_LocalScale: {x: 8, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -590,7 +594,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f51055ae388206d4e8bd61b7e8a65370, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &824497701
 Prefab:
@@ -675,14 +679,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441c9ed31b88df4b8fd7d7ebee480c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathy: -50
   tuplaaika: .25
   speed: 0
   jumpSpeed: 1500
   Maa: {fileID: 100000, guid: 7e1b3b874f4d88544bfbb2e4a0be2e67, type: 2}
   gravity: 1.39999998
   maxTorque1: 3000
-  minTorque1: 1000
   PlayerElamant: 0
+  minTorque1: 1000
   pyoriminen: 80
   CP: {fileID: 0}
   currentCheckPoint: {x: 0, y: 0, z: 0}

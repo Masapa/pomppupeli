@@ -1332,11 +1332,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.7144117
+      value: 15.236495
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .152121887
+      value: .674199224
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1361,6 +1361,10 @@ Prefab:
     - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
       propertyPath: m_RootMapOrder
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27c2f433787b6ae4384e5b29624f0f90, type: 2}
@@ -1763,14 +1767,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441c9ed31b88df4b8fd7d7ebee480c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathy: -50
   tuplaaika: .25
   speed: 0
   jumpSpeed: 1500
   Maa: {fileID: 100000, guid: 7e1b3b874f4d88544bfbb2e4a0be2e67, type: 2}
   gravity: 1.39999998
   maxTorque1: 3000
-  minTorque1: 1000
   PlayerElamant: 0
+  minTorque1: 1000
   pyoriminen: 80
   CP: {fileID: 0}
   currentCheckPoint: {x: 0, y: 0, z: 0}
@@ -3662,8 +3667,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2, y: 8}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 2.49864697, y: 3.88463593}
+  m_Center: {x: 1.24932098, y: -.619283676}
 --- !u!114 &2141613804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,7 +3688,7 @@ Transform:
   m_PrefabInternal: {fileID: 760573422}
   m_GameObject: {fileID: 2141613802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7144117, y: .152121887, z: 0}
+  m_LocalPosition: {x: 15.236495, y: .674199224, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
