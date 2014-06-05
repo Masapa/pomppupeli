@@ -2,32 +2,34 @@
 using System.Collections;
 
 public class Pallocontroll : MonoBehaviour {
-	public int deathy;
-	public float tuplaaika;
+	//publiikit
+	public int deathy; // korkeus kuolemaan Y koordinaatistossa
+	public float tuplaaika; // kauan sekunteina saa kestää tuplaklikkauksen välissä
+	public float speed; // kuinka nopeaa pallo menee
+	public float jumpSpeed; // kuinka korkealle pallo hyppää
+	public GameObject Maa; // turha, varmuuden vuoksi on täällä
+	public float gravity; // gravity erikseen
+	public float maxTorque1; //maximi pyörimisnopeus (käytetään paikalla spinnauksessa)
+	public int PlayerElamant; // pelaajan elämät..
+	public float minTorque1; // minimi pyörimis nopeus, elikkä normaalisti menee
+	public float pyoriminen; // torqueen se lisääminen per update
+	public GameObject CP; // turha
+	public Vector3 currentCheckPoint; //tämänhetkinen checkpoint
+	public static int koskee = 0; //koskeeko maahan.
+
 	bool tuplasaa = false;
 	float maxspin = 0;
-	public float speed;
-	public float jumpSpeed;
-	public GameObject Maa;
-	public float gravity;
-	public float maxTorque1;
 	float maxTorque;
 	float lefttupla;
 	float righttupla;
-	public float minTorque1;
 	float horizontal;
-	public int PlayerElamant;
 	int elamat;
 	float vertical;
-	public float pyoriminen;
 	float tmp;
 	float yleinentmp =0;
 	Vector3 temppi;
 	Vector3 lähtö;
 	int jump = 0;
-	public GameObject CP;
-	public Vector3 currentCheckPoint;
-	public static int koskee = 0;
 	float koskeex = 0;
 	float koskeey = 0;
 	int testi = 0;
