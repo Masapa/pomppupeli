@@ -53,7 +53,7 @@ public class PlayerCam : MonoBehaviour
 		float y = rigidbody2D.transform.position.y;
 		float x = rigidbody2D.transform.position.x;
 		int fuckyou = 0;
-		if (player.transform.position.y > -16) {
+		if (player.transform.position.y > player.deathy) {
 			if(player.transform.position.y > rigidbody2D.position.y+1){
 				fuckyou = 1;
 				y = Mathf.SmoothDamp(transform.position.y,player.transform.position.y,ref velocity.y,smoothTime);

@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441c9ed31b88df4b8fd7d7ebee480c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathy: -50
   tuplaaika: .25
   speed: 0
   jumpSpeed: 1500

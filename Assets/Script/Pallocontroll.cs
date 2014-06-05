@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Pallocontroll : MonoBehaviour {
-
+	public int deathy;
 	public float tuplaaika;
 	bool tuplasaa = false;
 	float maxspin = 0;
@@ -213,7 +213,7 @@ public class Pallocontroll : MonoBehaviour {
 	}
 
 	void kuolematesti(){
-		if (transform.position.y < -20) {
+		if (transform.position.y < deathy) {
 			kuolema ();
 			
 			
