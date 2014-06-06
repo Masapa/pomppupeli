@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Pallocontroll : MonoBehaviour {
-	//publiikit jutut moiikakaa
+	//publiikit jutut moiikakaa joysin
 	public int deathy; // korkeus kuolemaan Y koordinaatistossa
 	public float tuplaaika; // kauan sekunteina saa kestää tuplaklikkauksen välissä
 	public float speed; // kuinka nopeaa pallo menee
