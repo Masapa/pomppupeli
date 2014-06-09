@@ -72,14 +72,14 @@ MonoBehaviour:
   tuplaaika: .25
   speed: 0
   jumpSpeed: 1500
-  Maa: {fileID: 100000, guid: 7e1b3b874f4d88544bfbb2e4a0be2e67, type: 2}
-  gravity: 1.39999998
   maxTorque1: 3000
-  minTorque1: 1000
   PlayerElamant: 0
+  minTorque1: 1000
   pyoriminen: 80
   CP: {fileID: 0}
   currentCheckPoint: {x: 0, y: 0, z: 0}
+  use: 0
+  Inertia: 3.0999999
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

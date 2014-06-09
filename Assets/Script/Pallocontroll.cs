@@ -7,8 +7,7 @@ public class Pallocontroll : MonoBehaviour {
 	public float tuplaaika; // kauan sekunteina saa kestää tuplaklikkauksen välissä
 	public float speed; // kuinka nopeaa pallo menee
 	public float jumpSpeed; // kuinka korkealle pallo hyppää
-	public GameObject Maa; // turha, varmuuden vuoksi on täällä
-	public float gravity; // gravity erikseen
+	float gravity; // gravity erikseen
 	public float maxTorque1; //maximi pyörimisnopeus (käytetään paikalla spinnauksessa)
 	public int PlayerElamant; // pelaajan elämät..
 	public float minTorque1; // minimi pyörimis nopeus, elikkä normaalisti menee
@@ -16,7 +15,8 @@ public class Pallocontroll : MonoBehaviour {
 	public GameObject CP; // turha
 	public Vector3 currentCheckPoint; //tämänhetkinen checkpoint
 	public static int koskee = 0; //koskeeko maahan.
-
+	public bool use = false;
+	public float Inertia;
 	bool tuplasaa = false;
 	float maxspin = 0;
 	float maxTorque;
@@ -53,6 +53,7 @@ public class Pallocontroll : MonoBehaviour {
 		lähtö = transform.position;
 		currentCheckPoint = lähtö;
 		gravity = rigidbody2D.gravityScale;
+		rigidbody2D.inertia = Inertia;
 
 	}
 	void OnGUI() {
@@ -63,6 +64,13 @@ public class Pallocontroll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (rigidbody2D.inertia);
+		// space == käyttää
+		if (Input.GetKey (KeyCode.Space)) {
+						use = true;
+		
+				} else
+						use = false;
 			
 		if (koskeey < 0) {
 				
