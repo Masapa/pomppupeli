@@ -64,7 +64,7 @@ public class Pallocontroll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (rigidbody2D.inertia);
+	
 		// space == käyttää
 		if (Input.GetKey (KeyCode.Space)) {
 						use = true;
