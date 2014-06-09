@@ -201,6 +201,19 @@ public class Pallocontroll : MonoBehaviour {
 			
 		}	
 	}
+
+	void OnCollisionStay2D(Collision2D c){
+		
+		if (c.collider.tag == "Maa") {
+
+			koskeex = c.contacts[0].normal.x;
+			koskeey = c.contacts[0].normal.y;
+			koskee = 1;
+			
+			
+		}	
+	}
+
 	void OnCollisionExit2D(Collision2D c){
 		
 		if(c.collider.tag == "Maa"){
