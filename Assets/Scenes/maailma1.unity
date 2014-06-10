@@ -543,7 +543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &119628289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 11
 --- !u!1001 &413873591
 Prefab:
   m_ObjectHideFlags: 0
@@ -2084,6 +2084,14 @@ Prefab:
       propertyPath: m_RootMapOrder
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8659d12c87f9b1f4f8f55921b593b888, type: 2}
+      propertyPath: m_TagString
+      value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8659d12c87f9b1f4f8f55921b593b888, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8659d12c87f9b1f4f8f55921b593b888, type: 2}
   m_RootGameObject: {fileID: 1997142177}
@@ -2130,11 +2138,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: cameraoffsetx
-      value: .699999988
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: cameraoffsety
-      value: .200000003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: smoothTimex
@@ -2142,7 +2150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
@@ -2251,7 +2259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &579318724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,8 +3584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab10c250662a13e4b8796ec285bb1489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraoffsetx: .699999988
-  cameraoffsety: .200000003
+  cameraoffsetx: 0
+  cameraoffsety: 0
   smoothTime: .300000012
   smoothTimex: .300000012
   cameraFollowX: 1
@@ -3653,7 +3661,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 18
 --- !u!1 &1005734023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4702,7 +4710,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
 --- !u!1 &1333657928
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,7 +5796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &1754602804
 GameObject:
   m_ObjectHideFlags: 0
@@ -6315,7 +6323,7 @@ GameObject:
   - 61: {fileID: 1997142178}
   m_Layer: 0
   m_Name: Checkpoint
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6380,7 +6388,7 @@ Transform:
   m_LocalScale: {x: 1.71747887, y: 1.37368643, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
 --- !u!1001 &2087298440
 Prefab:
   m_ObjectHideFlags: 0
