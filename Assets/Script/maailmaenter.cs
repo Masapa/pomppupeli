@@ -5,6 +5,7 @@ using System;
 public class maailmaenter : MonoBehaviour {
 	public string maa;
 	public Sprite spritee;
+	public bool forseauki = false;
 	SpriteRenderer sprait ;
 	int i;
 	Pallocontroll other;
@@ -14,9 +15,6 @@ public class maailmaenter : MonoBehaviour {
 		for (i = 0; i<levut.Length; i++) {
 			if(levut[i] == maa){break;}		
 		}
-		if (maa == "") {
-			maa = "menu";		
-		}
 		int[] tmp2 = PlayerPrefsX.GetIntArray ("levutilanne");
 		float[] tmp = PlayerPrefsX.GetFloatArray ("levuscore");
 		other = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
@@ -25,16 +23,19 @@ public class maailmaenter : MonoBehaviour {
 		sprait = ovi.GetComponent<SpriteRenderer>();
 		//Sprite;
 		//sprait.sprite = 
-		Debug.Log (tmp [i]);
+
 
 		if (tmp2 [i] == 1) {
 						sprait.sprite = spritee;
 				}
-		if (tmp2 [i - 1] == 1 && i >0) {
+		if (i >0 && tmp2 [i - 1] == 1) {
 			sprait.sprite = spritee;}
 
 		TextMesh teksti = transform.Find ("aika").GetComponent<TextMesh> ();
+		//teksti.text +="\n"+ Math.Round (tmp [i],2)+" s.";
+
 		teksti.text +="\n"+ Math.Round (tmp [i],2)+" s.";
+
 
 
 	}
@@ -45,7 +46,7 @@ public class maailmaenter : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D c) {
-		if (other.use == true && sprait.sprite == spritee) {
+		if ((other.use == true && sprait.sprite == spritee) || forseauki) {
 			Application.LoadLevel(maa);
 		
 		}

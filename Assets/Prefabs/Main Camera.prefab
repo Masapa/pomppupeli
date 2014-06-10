@@ -105,10 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab10c250662a13e4b8796ec285bb1489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTarget: {fileID: 0}
-  player: {fileID: 0}
+  cameraoffsetx: .5
+  cameraoffsety: 0
   smoothTime: .300000012
-  smoothTimex: .600000024
+  smoothTimex: .300000012
   cameraFollowX: 1
   cameraFollowY: 1
   cameraFollowHeight: 1
