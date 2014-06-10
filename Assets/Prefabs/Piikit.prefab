@@ -9,8 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
+  - 60: {fileID: 6000002}
+  - 60: {fileID: 6000000}
   m_Layer: 0
   m_Name: Piikit
   m_TagString: Piikki
@@ -25,13 +26,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.91558695, y: -.156267166, z: 0}
+  m_LocalPosition: {x: 7.94321299, y: -.273799896, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: 1.77020967, y: -.539084613}
+      - {x: -1.77260768, y: -.53743875}
+      - {x: -1.77478111, y: .504985988}
+      - {x: -2.00062084, y: -.281526029}
+      - {x: -2, y: -.75}
+      - {x: 2.00316238, y: -.746208191}
+      - {x: 2.00118518, y: -.278292447}
+      - {x: 1.77013457, y: .498710394}
+--- !u!60 &6000002
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -39,8 +59,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: .179643393}
-  m_Center: {x: 0, y: -.160178304}
+  m_Poly:
+    m_Paths:
+    - - {x: -1.7431339, y: .541987419}
+      - {x: -1.74452639, y: -.499632865}
+      - {x: 1.72855222, y: -.50595361}
+      - {x: 1.73406279, y: .538325608}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
