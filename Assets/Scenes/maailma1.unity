@@ -718,7 +718,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1001 &164920309
 Prefab:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!1 &260516621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,10 +2137,6 @@ Prefab:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
-      propertyPath: cameraoffsetx
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: cameraoffsety
       value: 0
       objectReference: {fileID: 0}
@@ -2150,7 +2146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
@@ -3733,7 +3729,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 26
 --- !u!1 &1005734023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3836,7 +3832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!1001 &1032882002
 Prefab:
   m_ObjectHideFlags: 0
