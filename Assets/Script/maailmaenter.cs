@@ -5,6 +5,7 @@ using System;
 public class maailmaenter : MonoBehaviour {
 	public string maa;
 	public Sprite spritee;
+	public bool forseauki = false;
 	SpriteRenderer sprait ;
 	int i;
 	Pallocontroll other;
@@ -27,7 +28,7 @@ public class maailmaenter : MonoBehaviour {
 		if (tmp2 [i] == 1) {
 						sprait.sprite = spritee;
 				}
-		if ( i >1 &&tmp2 [i - 1] == 1) {
+		if (i >0 && tmp2 [i - 1] == 1) {
 			sprait.sprite = spritee;}
 
 		TextMesh teksti = transform.Find ("aika").GetComponent<TextMesh> ();
@@ -45,7 +46,7 @@ public class maailmaenter : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D c) {
-		if (other.use == true && sprait.sprite == spritee) {
+		if ((other.use == true && sprait.sprite == spritee) || forseauki) {
 			Application.LoadLevel(maa);
 		
 		}

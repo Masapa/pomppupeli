@@ -75,11 +75,24 @@ public class PlayerCam : MonoBehaviour
 
 
 
-			if(player.horizontal == -1 && player.rigidbody2D.velocity.x <-10){
-				tmp = Mathf.SmoothStep(0,-cameraoffsetx,3f);
-			}else if(player.horizontal == 1 && player.rigidbody2D.velocity.x >10){
-				tmp = Mathf.SmoothStep(0, cameraoffsetx,3f);
-			}else {tmp = Mathf.SmoothStep(tmp,0,100F);}
+//			if(player.horizontal == -1 && player.rigidbody2D.velocity.x <-10){
+//				tmp = Mathf.SmoothStep(0,-cameraoffsetx,3f);
+//			}else if(player.horizontal == 1 && player.rigidbody2D.velocity.x >10){
+//				tmp = Mathf.SmoothStep(0, cameraoffsetx,3f);
+//			}else {tmp = Mathf.SmoothStep(tmp,0,100F);}
+			if(player.rigidbody2D.velocity.x >10 || player.rigidbody2D.velocity.x <-10){
+			
+				if(player.rigidbody2D.velocity.x <-3 && tmp > -cameraoffsetx){
+					tmp -= cameraoffsetx*0.04f;
+					if(tmp < -cameraoffsetx){tmp = -cameraoffsetx;}}
+			if(player.rigidbody2D.velocity.x >3 && tmp < cameraoffsetx){
+					tmp += cameraoffsetx*0.04f;}
+				if(tmp > cameraoffsetx){tmp = cameraoffsetx;}
+			}else{
+				tmp = 0;
+				 
+			}
+
 		transform.position = (new Vector3(x+tmp,y,transform.position.z));
 		rigidbody2D.velocity = new Vector2(0,0);
 	}

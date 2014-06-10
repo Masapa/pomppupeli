@@ -21,7 +21,6 @@ public bool	isQuitButton = false;
 		levut.Add ("level3");
 		levut.Add ("level4");
 		levut.Add ("level5");
-		levut.Add ("alkupolku");
 
 		
 		levuscore = new float[levut.Count];
