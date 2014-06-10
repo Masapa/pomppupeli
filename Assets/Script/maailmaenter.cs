@@ -4,6 +4,8 @@ using System;
 
 public class maailmaenter : MonoBehaviour {
 	public string maa;
+	public Sprite spritee;
+	SpriteRenderer sprait ;
 	int i;
 	Pallocontroll other;
 	// Use this for initialization
@@ -20,12 +22,19 @@ public class maailmaenter : MonoBehaviour {
 		other = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
 		Transform tekst = transform.FindChild ("aika");
 		Transform ovi = transform.FindChild ("entrance");
-		SpriteRenderer sprait = ovi.GetComponent<SpriteRenderer>();
+		sprait = ovi.GetComponent<SpriteRenderer>();
 		//Sprite;
 		//sprait.sprite = 
-		//		TextMesh teksti = tekst.GetComponent<TextMesh> ();
-		//TextMesh teksti = transform.Find ("aika").GetComponent<TextMesh> ();
-		//teksti.text +="\n"+ Math.Round (tmp [i],2)+"s.";
+		Debug.Log (tmp [i]);
+
+		if (tmp2 [i] == 1) {
+						sprait.sprite = spritee;
+				}
+		if (tmp2 [i - 1] == 1 && i >0) {
+			sprait.sprite = spritee;}
+
+		TextMesh teksti = transform.Find ("aika").GetComponent<TextMesh> ();
+		teksti.text +="\n"+ Math.Round (tmp [i],2)+" s.";
 
 
 	}
@@ -36,7 +45,7 @@ public class maailmaenter : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D c) {
-		if (other.use == true) {
+		if (other.use == true && sprait.sprite == spritee) {
 			Application.LoadLevel(maa);
 		
 		}

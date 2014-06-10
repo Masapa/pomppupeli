@@ -119,7 +119,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
@@ -912,7 +912,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &258131578
 GameObject:
@@ -1298,6 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: level3
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &309737365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1399,6 +1400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: level2
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &345498710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1624,7 +1626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
@@ -2278,7 +2280,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &595256671
 GameObject:
@@ -2427,6 +2429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: POMPPUFIILIS
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &663838589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2867,6 +2870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: alku
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &766372793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3224,6 +3228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: level1
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &845791686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3325,6 +3330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: level5
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &848424791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4110,7 +4116,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
@@ -4261,7 +4267,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1188293100
 Transform:
@@ -4721,7 +4727,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1354048645
 Prefab:
@@ -4816,7 +4822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
-      value: 31
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
@@ -5195,7 +5201,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1478987971
 GameObject:
@@ -5246,7 +5252,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1500085621
 Prefab:
@@ -5293,7 +5299,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
@@ -5493,7 +5499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
-      value: 28
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
@@ -6033,7 +6039,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3851001955ccc4ab7044f1c21163c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1898121334
 Prefab:
@@ -6473,6 +6479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maa: level4
+  spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
 --- !u!61 &2104053394
 BoxCollider2D:
   m_ObjectHideFlags: 0
