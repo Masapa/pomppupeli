@@ -167,7 +167,7 @@ public class Pallocontroll : MonoBehaviour {
 					rigidbody2D.velocity = new Vector2(0,rigidbody2D.velocity.y);
 				}
 				tmp = horizontal;*/
-										rigidbody2D.velocity = new Vector2 (Mathf.SmoothDamp (rigidbody2D.velocity.x, 0, ref velocity.x, 1F), rigidbody2D.velocity.y);
+									//	rigidbody2D.velocity = new Vector2 (Mathf.SmoothDamp (rigidbody2D.velocity.x, 0, ref velocity.x, 1F), rigidbody2D.velocity.y);
 										rigidbody2D.AddForce (Vector2.right * horizontal * speed);
 				if(rigidbody2D.velocity.x > maxspin){
 					maxspin = rigidbody2D.velocity.x;

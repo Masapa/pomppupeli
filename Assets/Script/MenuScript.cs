@@ -14,6 +14,7 @@ public bool	isQuitButton = false;
 		levut = new List<string>();
 		//tähän pitää laittaa levujen nimet.
 		levut.Add ("alku");
+		levut.Add ("alkupolku");
 		levut.Add ("POMPPUFIILIS");
 		levut.Add ("level1");
 		levut.Add ("level2");
