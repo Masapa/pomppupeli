@@ -3,9 +3,10 @@ using System.Collections;
 
 public class PlayerCam : MonoBehaviour
 {
-	
-	public Pallocontroll cameraTarget; // object to look at or follow
-	public Pallocontroll player; // player object for moving
+	public float cameraoffsetx;
+	public float cameraoffsety;
+	Pallocontroll cameraTarget; // object to look at or follow
+	Pallocontroll player; // player object for moving
 	
 	public float smoothTime; // time for dampen
 	public float smoothTimex;
@@ -16,7 +17,8 @@ public class PlayerCam : MonoBehaviour
 	public Vector2 velocity; // speed of camera movement
 	
 	private Transform thisTransform; // camera Transform
-	
+
+	float tmp;
 	// Use this for initialization
 	void Start()
 	{
@@ -72,7 +74,13 @@ public class PlayerCam : MonoBehaviour
 
 
 
-		transform.position = (new Vector3(x,y,transform.position.z));
+
+			if(player.horizontal == -1 && player.rigidbody2D.velocity.x <-10){
+				tmp = Mathf.SmoothStep(0,-cameraoffsetx,3f);
+			}else if(player.horizontal == 1 && player.rigidbody2D.velocity.x >10){
+				tmp = Mathf.SmoothStep(0, cameraoffsetx,3f);
+			}else {tmp = Mathf.SmoothStep(tmp,0,100F);}
+		transform.position = (new Vector3(x+tmp,y,transform.position.z));
 		rigidbody2D.velocity = new Vector2(0,0);
 	}
 }

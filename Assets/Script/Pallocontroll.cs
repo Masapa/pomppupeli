@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Pallocontroll : MonoBehaviour {
 	//publiikit jutut moiikakaa joysin
+
 	public int deathy; // korkeus kuolemaan Y koordinaatistossa
 	public float tuplaaika; // kauan sekunteina saa kestää tuplaklikkauksen välissä
 	public float speed; // kuinka nopeaa pallo menee
@@ -22,7 +23,7 @@ public class Pallocontroll : MonoBehaviour {
 	float maxTorque;
 	float lefttupla;
 	float righttupla;
-	float horizontal;
+	public float horizontal;
 	int elamat;
 	float vertical;
 	float tmp;
