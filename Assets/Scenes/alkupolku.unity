@@ -9015,7 +9015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 112
+  m_RootOrder: 111
 --- !u!1001 &284403293
 Prefab:
   m_ObjectHideFlags: 0
@@ -13678,7 +13678,7 @@ Transform:
   m_LocalScale: {x: 1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 53
 --- !u!1 &427319633
 GameObject:
   m_ObjectHideFlags: 0
@@ -20590,7 +20590,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 123
+  m_RootOrder: 122
 --- !u!1 &602745772
 GameObject:
   m_ObjectHideFlags: 0
@@ -23894,7 +23894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 115
+  m_RootOrder: 114
 --- !u!1 &703479407
 GameObject:
   m_ObjectHideFlags: 0
@@ -29989,7 +29989,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 60
 --- !u!1001 &871517725
 Prefab:
   m_ObjectHideFlags: 0
@@ -32259,7 +32259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 54
 --- !u!1001 &964504897
 Prefab:
   m_ObjectHideFlags: 0
@@ -32943,7 +32943,7 @@ Transform:
   m_LocalScale: {x: 1, y: -.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 56
 --- !u!1 &993688095
 GameObject:
   m_ObjectHideFlags: 0
@@ -35092,7 +35092,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 52
 --- !u!1 &1056001075
 GameObject:
   m_ObjectHideFlags: 0
@@ -40711,7 +40711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 59
 --- !u!1001 &1215662165
 Prefab:
   m_ObjectHideFlags: 0
@@ -41363,7 +41363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 124
+  m_RootOrder: 123
 --- !u!1 &1225692052
 GameObject:
   m_ObjectHideFlags: 0
@@ -43193,7 +43193,7 @@ Transform:
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 55
 --- !u!1 &1283804547
 GameObject:
   m_ObjectHideFlags: 0
@@ -52375,7 +52375,7 @@ Transform:
   m_LocalScale: {x: 1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 57
 --- !u!1 &1565064564
 GameObject:
   m_ObjectHideFlags: 0
@@ -54297,7 +54297,7 @@ Transform:
   m_LocalScale: {x: -1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 111
+  m_RootOrder: 115
 --- !u!1 &1615166582
 GameObject:
   m_ObjectHideFlags: 0
@@ -55927,7 +55927,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 113
+  m_RootOrder: 112
 --- !u!1 &1651676431
 GameObject:
   m_ObjectHideFlags: 0
@@ -60383,7 +60383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 114
+  m_RootOrder: 113
 --- !u!1001 &1762514046
 Prefab:
   m_ObjectHideFlags: 0
@@ -63496,7 +63496,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: cameraTarget
@@ -63520,7 +63520,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
       propertyPath: cameraoffsetx
-      value: .5
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
@@ -67314,7 +67314,7 @@ Transform:
   m_LocalScale: {x: 1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 122
+  m_RootOrder: 124
 --- !u!1001 &1972778620
 Prefab:
   m_ObjectHideFlags: 0
@@ -68214,7 +68214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab10c250662a13e4b8796ec285bb1489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraoffsetx: .5
+  cameraoffsetx: 5
   cameraoffsety: 0
   smoothTime: .300000012
   smoothTimex: .300000012

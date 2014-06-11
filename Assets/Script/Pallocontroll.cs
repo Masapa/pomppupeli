@@ -35,6 +35,7 @@ public class Pallocontroll : MonoBehaviour {
 	float koskeey = 0;
 	int testi = 0;
 	Vector2 velocity;
+	public bool kuolemaperm = false;
 	// Use this for initialization
 		void Start () {
 		if (PlayerElamant == 0) {
@@ -252,7 +253,7 @@ public class Pallocontroll : MonoBehaviour {
 		rigidbody2D.fixedAngle = false;
 		rigidbody2D.velocity = new Vector3 (0, 0, 0);
 		elamat--;
-		if (elamat == 0) {
+		if (elamat == 0 && kuolemaperm == true) {
 			
 			
 			GameObject[] testi = GameObject.FindGameObjectsWithTag("Checkpoint");
