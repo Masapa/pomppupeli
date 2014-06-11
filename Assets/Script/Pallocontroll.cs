@@ -36,7 +36,7 @@ public class Pallocontroll : MonoBehaviour {
 	int testi = 0;
 	Vector2 velocity;
 	// Use this for initialization
-	void Start () {
+		void Start () {
 		if (PlayerElamant == 0) {
 						elamat = 4;
 				} else

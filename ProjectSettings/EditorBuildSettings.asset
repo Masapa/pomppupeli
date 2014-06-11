@@ -10,6 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Options.unity
   - enabled: 1
+    path: Assets/Scenes/maailma1.unity
+  - enabled: 1
     path: Assets/Scenes/alku.unity
   - enabled: 1
     path: Assets/Scenes/POMPPUFIILIS.unity
@@ -23,8 +25,6 @@ EditorBuildSettings:
     path: Assets/Scenes/level4.unity
   - enabled: 1
     path: Assets/Scenes/level5.unity
-  - enabled: 1
-    path: Assets/Scenes/maailma1.unity
   - enabled: 1
     path: Assets/Scenes/alkupolku.unity
   - enabled: 1
