@@ -212,14 +212,15 @@ MonoBehaviour:
   tuplaaika: .25
   speed: 0
   jumpSpeed: 1500
-  Maa: {fileID: 100000, guid: 7e1b3b874f4d88544bfbb2e4a0be2e67, type: 2}
-  gravity: 1.39999998
   maxTorque1: 3000
   PlayerElamant: 0
   minTorque1: 1000
   pyoriminen: 80
   CP: {fileID: 0}
   currentCheckPoint: {x: 0, y: 0, z: 0}
+  use: 0
+  Inertia: 1
+  horizontal: 0
 --- !u!50 &91243619
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -528,10 +529,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab10c250662a13e4b8796ec285bb1489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTarget: {fileID: 0}
-  player: {fileID: 0}
+  cameraoffsetx: 0
+  cameraoffsety: 0
   smoothTime: .300000012
-  smoothTimex: .600000024
+  smoothTimex: .300000012
   cameraFollowX: 1
   cameraFollowY: 1
   cameraFollowHeight: 1
