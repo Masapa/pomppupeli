@@ -19,9 +19,11 @@ public class PlayerCam : MonoBehaviour
 	private Transform thisTransform; // camera Transform
 
 	float tmp;
+	float tmp2;
 	// Use this for initialization
 	void Start()
 	{
+		tmp = 0;
 		if (smoothTime == 0) {
 			smoothTime = 0.6F;}
 		if (smoothTimex == 0) {
@@ -35,7 +37,7 @@ public class PlayerCam : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate()
 	{
-		/*
+				/*
 		if (cameraFollowX)
 		{
 			thisTransform.position = new Vector3(Mathf.SmoothDamp(thisTransform.position.x, cameraTarget.transform.position.x, ref velocity.x, smoothTime), thisTransform.position.y, thisTransform.position.z);
@@ -48,11 +50,11 @@ public class PlayerCam : MonoBehaviour
 		{
 			// to do
 		}*/
-		/*
+				/*
 		if (player.transform.position.y > -16) {
 						thisTransform.position = new Vector3 (player.transform.position.x, player.transform.position.y, thisTransform.position.z);
 				}*/
-		float y = rigidbody2D.transform.position.y;
+				/*float y = rigidbody2D.transform.position.y;
 		float x = rigidbody2D.transform.position.x;
 		int fuckyou = 0;
 		if (player.transform.position.y > player.deathy) {
@@ -93,10 +95,44 @@ public class PlayerCam : MonoBehaviour
 				 
 			}
 
-		transform.position = (new Vector3(x+tmp,y,transform.position.z));
-		rigidbody2D.velocity = new Vector2(0,0);
-	}
+			transform.position = (new Vector3(Mathf.Clamp(x+tmp,(player.transform.position.x - cameraoffsetx-1.5f),player.transform.position.x + cameraoffsetx+1.5f),y,transform.position.z));
+		//	transform.position = (new Vector3(x+tmp,y,transform.position.z));
+			rigidbody2D.velocity = new Vector2(0,0);
+
+
+
+
+	}*/
+	
+				//if (tmp >= -cameraoffsetx && tmp <= cameraoffsetx) {
+
+						if (player.rigidbody2D.velocity.x > 12 || player.rigidbody2D.velocity.x < -12) {
+			
+								/*if (player.rigidbody2D.velocity.x < 0 && tmp > -cameraoffsetx) {
+										tmp -= cameraoffsetx * Time.deltaTime * 0.5F;
+										//	if(tmp < -cameraoffsetx){tmp = -cameraoffsetx;}
+								}else if (player.rigidbody2D.velocity.x > 0 && tmp < cameraoffsetx) {
+										tmp += cameraoffsetx * Time.deltaTime * 0.5F;
+								}*/
+			if(tmp <cameraoffsetx && tmp >-cameraoffsetx){
+				tmp += (cameraoffsetx  * player.rigidbody2D.velocity.normalized.x) * Time.deltaTime * 0.5F;
+
+			}
+
+								//if(tmp > cameraoffsetx){tmp = cameraoffsetx;}
+			}else{
+			if(tmp >0f){tmp -= cameraoffsetx* Time.deltaTime * 0.5F; }
+				if(tmp <0f){
+				tmp +=cameraoffsetx * Time.deltaTime * 0.5F;}
+				}
+		//player.rigidbody2D.
+float x = Mathf.Clamp (transform.position.x,player.transform.position.x-1.5F,player.transform.position.x+1.5F);
+float y = Mathf.Clamp (transform.position.y,player.transform.position.y-1.5F,player.transform.position.y+1.5F);
+		transform.position = new Vector3(x+tmp,y,transform.position.z);
+
 }
 
 }
+
+
 	

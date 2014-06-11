@@ -2148,6 +2148,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
+      propertyPath: cameraoffsetx
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d933ff6fb137a94e81f57e8c0b16b19, type: 2}
   m_RootGameObject: {fileID: 994786952}
@@ -2738,6 +2742,10 @@ Prefab:
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
       value: alkupolku
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
+      propertyPath: forseauki
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
@@ -3652,7 +3660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab10c250662a13e4b8796ec285bb1489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraoffsetx: 0
+  cameraoffsetx: 5
   cameraoffsety: 0
   smoothTime: .300000012
   smoothTimex: .300000012

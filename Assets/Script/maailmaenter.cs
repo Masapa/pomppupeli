@@ -49,6 +49,7 @@ public class maailmaenter : MonoBehaviour {
 		Transform tekst = transform.FindChild ("aika");
 		Transform ovi = transform.FindChild ("entrance");
 		sprait = ovi.GetComponent<SpriteRenderer>();
+
 		//Sprite;
 		//sprait.sprite = 
 
