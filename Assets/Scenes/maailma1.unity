@@ -1521,6 +1521,7 @@ MonoBehaviour:
   use: 0
   Inertia: 1
   horizontal: 0
+  kuolemaperm: 0
 --- !u!50 &391456957
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1681,7 +1682,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 741528659}
   m_GameObject: {fileID: 420020674}
-  m_Text: Alku
+  m_Text: Level 1
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -1730,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maa: alkupolku
   spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
-  forseauki: 0
+  forseauki: 1
 --- !u!61 &420020679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2733,7 +2734,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 10200000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_Text
-      value: Alku
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
@@ -2745,6 +2746,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: forseauki
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
+      propertyPath: m_UseLightProbes
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2831,7 +2836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372c8bcb6d6ff8e4eacbc498632f4729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maa: alku
+  maa: piikkipaikka1
   spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
   forseauki: 1
 --- !u!61 &766372793
@@ -2868,7 +2873,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1635455215}
   m_GameObject: {fileID: 766372791}
-  m_Text: Level 1
+  m_Text: Kuolema
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -5820,6 +5825,14 @@ Prefab:
       propertyPath: forseauki
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
+      propertyPath: maa
+      value: piikkipaikka1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10200000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
+      propertyPath: m_Text
+      value: Kuolema
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
   m_RootGameObject: {fileID: 766372791}
@@ -6195,7 +6208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 10200000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_Text
-      value: Piikit
+      value: random
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: m_RootOrder
@@ -6203,11 +6216,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: maa
-      value: piikkipaikka1
+      value: alku
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
       propertyPath: forseauki
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0e9971e9b2c2944ab130b653d32eba7, type: 2}
@@ -6306,7 +6319,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1798292636}
   m_GameObject: {fileID: 1886945429}
-  m_Text: Piikit
+  m_Text: random
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -6353,9 +6366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372c8bcb6d6ff8e4eacbc498632f4729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maa: piikkipaikka1
+  maa: alku
   spritee: {fileID: 21300000, guid: 6c07c7ba0f0d994489f5d8fd92757ed4, type: 3}
-  forseauki: 1
+  forseauki: 0
 --- !u!61 &1886945434
 BoxCollider2D:
   m_ObjectHideFlags: 0
