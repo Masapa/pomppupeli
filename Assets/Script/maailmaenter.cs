@@ -13,9 +13,10 @@ public class maailmaenter : MonoBehaviour {
 	List<string> levut;
 	List<int> tilanne;
 	List<float> aika;
-
+	List<int> kuolemat;
 	// Use this for initialization
 	void OnLevelWasLoaded(int level){
+		kuolemat = new List<int> ();
 		levut = new List<string>();
 		tilanne = new List<int> ();
 		aika = new List<float> ();
@@ -61,10 +62,11 @@ public class maailmaenter : MonoBehaviour {
 			sprait.sprite = spritee;}
 
 		TextMesh teksti = transform.Find ("aika").GetComponent<TextMesh> ();
+		TextMesh elam = transform.Find ("elamat").GetComponent<TextMesh> ();
 		//teksti.text +="\n"+ Math.Round (tmp [i],2)+" s.";
 
-		teksti.text +="\n"+ Math.Round (aika [i],2)+" s.";
-
+		teksti.text +=""+ Math.Round (aika [i],2)+" s.";
+		elam.text += "" + kuolemat[i];
 
 
 	}
@@ -89,7 +91,7 @@ public class maailmaenter : MonoBehaviour {
 		foreach (string k in levut) {
 			aika.Add (PlayerPrefs.GetFloat(k+"levuscore"));
 			tilanne.Add (PlayerPrefs.GetInt (k+"levutilanne"));
-			      
+			kuolemat.Add (PlayerPrefs.GetInt (k+"lives"));
 		
 		}
 	

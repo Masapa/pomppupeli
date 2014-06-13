@@ -3,10 +3,10 @@ using System.Collections;
 
 public class voitto : MonoBehaviour {
 	int i ;
-
+	Pallocontroll other;
 	// Use this for initialization
 	void Start () {
-
+		other = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
 		
 		
 	}
@@ -18,11 +18,17 @@ public class voitto : MonoBehaviour {
 
 	void OnTriggerEnter2D() {
 		PlayerPrefs.SetInt ("currentlevel", 1);
+		int lifes = PlayerPrefs.GetInt (Application.loadedLevelName + "lives");
+		if (lifes < other.getElamat ()) {
+			lifes = other.getElamat ();
+			PlayerPrefs.SetInt (Application.loadedLevelName+"lives",lifes);
+		}
 		float tmp = PlayerPrefs.GetFloat (Application.loadedLevelName+"levuscore");
 		if (tmp > Time.timeSinceLevelLoad || tmp == 0) {
 						tmp = Time.timeSinceLevelLoad;
 			PlayerPrefs.SetFloat(Application.loadedLevelName+"levuscore",tmp);
 				}
+
 		int tmp2 = PlayerPrefs.GetInt (Application.loadedLevelName+"levutilanne");
 		tmp2 = 1;
 		PlayerPrefs.SetInt (Application.loadedLevelName+"levutilanne", tmp2);

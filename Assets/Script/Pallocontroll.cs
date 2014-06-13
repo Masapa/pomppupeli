@@ -405,7 +405,10 @@ public class Pallocontroll: MonoBehaviour
 
 	}
 
+	public int getElamat(){
+		return elamat;
 
+	}
 
 
 	}
