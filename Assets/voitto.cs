@@ -19,7 +19,7 @@ public class voitto : MonoBehaviour {
 	void OnTriggerEnter2D() {
 		PlayerPrefs.SetInt ("currentlevel", 1);
 		int lifes = PlayerPrefs.GetInt (Application.loadedLevelName + "lives");
-		if (lifes < other.getElamat ()) {
+		if (Mathf.Abs(lifes) < Mathf.Abs(other.getElamat ()) || lifes == 0) {
 			lifes = other.getElamat ();
 			PlayerPrefs.SetInt (Application.loadedLevelName+"lives",lifes);
 		}
