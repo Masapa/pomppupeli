@@ -15,7 +15,7 @@ public class Minimap : MonoBehaviour {
 	void Start () {
 
 		minimapCamera.rect = new Rect(Camera.main.rect.width-0.3f,Camera.main.rect.height-0.3f,0.19f,0.19f);
-		cameraTarget =  (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
+	//	cameraTarget =  (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
 		player = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
 	}
 	

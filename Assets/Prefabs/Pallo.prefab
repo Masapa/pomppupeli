@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathy: -50
   tuplaaika: .25
-  speed: 0
+  speed: 4
   jumpSpeed: 1500
   maxTorque1: 3000
   PlayerElamant: 0
@@ -80,6 +80,9 @@ MonoBehaviour:
   currentCheckPoint: {x: 0, y: 0, z: 0}
   use: 0
   Inertia: 1
+  pause: 0
+  horizontal: 0
+  kuolemaperm: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

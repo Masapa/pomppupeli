@@ -19,8 +19,10 @@ public class Pallocontroll: MonoBehaviour
 	public static int koskee = 0; //koskeeko maahan.
 	public bool use = false;
 	public float Inertia;
+	public int pause = 0;
 	bool tuplasaa = false;
 	float maxspin = 0;
+	int paussik = 0;
 	float maxTorque;
 	float lefttupla;
 	float righttupla;
@@ -37,6 +39,7 @@ public class Pallocontroll: MonoBehaviour
 	int testi = 0;
 	Vector2 velocity;
 	public bool kuolemaperm = false;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -62,25 +65,102 @@ public class Pallocontroll: MonoBehaviour
 		currentCheckPoint = lähtö;
 		gravity = rigidbody2D.gravityScale;
 		rigidbody2D.inertia = Inertia;
+
+
+
+
+
 		
 	}
 	
 	void OnGUI()
 	{
-		GUI.contentColor = Color.black;
-		GUI.Label(new Rect(280, 10, 250, 100), "Nopeus x: " + rigidbody2D.velocity.x + "\nNopeus y: " + rigidbody2D.velocity.y + "\nMaxSpinni x: " + maxspin);
-		GUI.Label(new Rect(10, 10, 250, 100), "Kosketuksen y: " + koskeey + "\nKosketuksen x: " + koskeex + "\nElämät: " + elamat + "\nAika: " + Time.timeSinceLevelLoad);
+
+
+						
+						GUI.Label (new Rect (280, 10, 250, 100), "Nopeus x: " + rigidbody2D.velocity.x + "\nNopeus y: " + rigidbody2D.velocity.y + "\nMaxSpinni x: " + maxspin);
+						GUI.Label (new Rect (10, 10, 250, 100), "Kosketuksen y: " + koskeey + "\nKosketuksen x: " + koskeex + "\nElämät: " + elamat + "\nAika: " + Time.timeSinceLevelLoad);
+				
+		GUIStyle buttoni = new GUIStyle ("Button");
+		buttoni.name = "buttoni";
+		buttoni.fontSize = 40;
+		buttoni.alignment = TextAnchor.MiddleCenter;
+		if (pause == 1) {
+			float height = 60;
+			float width = 160;
+
+			if(GUI.Button (new Rect((Screen.width/2)-(width/2),(Screen.height/2)-(height*3),width,height),"Resume",buttoni)){
+				pause = 0;
+			}	
+			if(GUI.Button (new Rect((Screen.width/2)-(width/2),(Screen.height/2)-(height),width,height),"Restart",buttoni)){
+				Application.LoadLevel(Application.loadedLevel);
+			}	
+			if(GUI.Button (new Rect((Screen.width/2)-(width/2),(Screen.height/2)+(height),width,height),"Exit",buttoni)){
+				Application.LoadLevel("maailma1");
+			}	
+		
+		
+		}
+		if (paussik == 1 && pause == 0) {
+			GUIContent kuolemateksti = new GUIContent("You died! Press Enter to restart");
+			GUIStyle kuolematyyli = new GUIStyle("Label");
+			kuolematyyli.normal.textColor = Color.black;
+			kuolematyyli.fontSize = 40;
+			kuolematyyli.alignment = TextAnchor.UpperCenter;
+
+			GUI.Label(new Rect(0,Screen.height/2,Screen.width,Screen.height),kuolemateksti,kuolematyyli);     
+		}
+
+
 	}
-	
+
+	/*
+	 * 
+	 * 		other = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
+		Transform tekst = transform.FindChild ("aika");
+		Transform ovi = transform.FindChild ("entrance");
+		sprait = ovi.GetComponent<SpriteRenderer>();
+
+		//Sprite;
+		//sprait.sprite = 
+
+
+		if (tilanne [i] == 1 || forseauki == true) {
+						sprait.sprite = spritee;
+				}
+		if (i >0 && tilanne [i - 1] == 1) {
+			sprait.sprite = spritee;}
+
+		TextMesh teksti = transform.Find ("aika").GetComponent<TextMesh> ();
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * */
+
 	// Update is called once per frame
 	void Update()
 	{
-		
+		if (pause == 1 || paussik == 1) {
+						Time.timeScale = 0;
+				} else {
+						Time.timeScale = 1;
+				}
+
+
+		if (Input.GetKeyDown (KeyCode.Return) && pause == 0) {
+			kuolema ();
+			spawn ();
+				
+		}
+
 		// space == käyttää
-		if (Input.GetKey(KeyCode.Space))
+		if (Input.GetKey(KeyCode.Space) && (pause == 0 || paussik == 1))
 		{
+
 			use = true;
-			
+
 		}
 		else
 			use = false;
@@ -94,7 +174,7 @@ public class Pallocontroll: MonoBehaviour
 		//float horizontal;// = Input.GetAxis ("Horizontal");
 		//Debug.Log (horizontal);
 		
-		if (Input.GetKey(KeyCode.DownArrow) && koskee == 1)
+		if (Input.GetKey(KeyCode.DownArrow) && koskee == 1 && pause == 0)
 		{
 			if ((koskeex < 1 && koskeex > -1) && koskeey > 0)
 			{
@@ -120,17 +200,17 @@ public class Pallocontroll: MonoBehaviour
 			
 		}
 		
-		if (Input.GetKeyUp(KeyCode.LeftArrow))
+		if (Input.GetKeyUp(KeyCode.LeftArrow) && pause == 0)
 		{
 			lefttupla = Time.timeSinceLevelLoad;
 			
 		}
-		if (Input.GetKeyUp(KeyCode.RightArrow))
+		if (Input.GetKeyUp(KeyCode.RightArrow) && pause == 0)
 		{
 			righttupla = Time.timeSinceLevelLoad;
 			
 		}
-		if (Input.GetKey(KeyCode.LeftArrow))
+		if (Input.GetKey(KeyCode.LeftArrow) && pause == 0)
 		{
 			if (Time.timeSinceLevelLoad - lefttupla < tuplaaika)
 			{
@@ -153,7 +233,7 @@ public class Pallocontroll: MonoBehaviour
 				rigidbody2D.AddTorque(pyoriminen);
 			}
 		}
-		else if (Input.GetKey(KeyCode.RightArrow))
+		else if (Input.GetKey(KeyCode.RightArrow) && pause == 0)
 		{
 			
 			if (Time.timeSinceLevelLoad - righttupla < tuplaaika)
@@ -197,8 +277,17 @@ public class Pallocontroll: MonoBehaviour
 				
 			}
 		}
+
+
+		if (Input.GetKeyDown (KeyCode.Escape)) 
+		{
+			if(pause == 0){pause = 1;}else pause = 0;
+		}
+
+
+
 		
-		if (Input.GetKeyDown(KeyCode.UpArrow))
+		if (Input.GetKeyDown(KeyCode.UpArrow) && pause == 0)
 		{
 			if (jump == 1)
 			{
@@ -212,7 +301,9 @@ public class Pallocontroll: MonoBehaviour
 		kuolematesti();
 		
 	}
-	
+
+
+
 	void OnCollisionEnter2D(Collision2D c)
 	{
 		
@@ -267,28 +358,57 @@ public class Pallocontroll: MonoBehaviour
 	//kuolema testi
 	public void kuolema()
 	{
+
+		Time.timeScale = 0;
+		paussik = 1;
+		kuolemareset ();
+		if (elamat-1 == 0 && kuolemaperm == true)
+		{
+			fullkuolemareset();
+		}
+
+	}
+
+
+	void fullkuolemareset(){
+		
+		GameObject[] testi = GameObject.FindGameObjectsWithTag("Checkpoint");
+		for (int i = 0; i < testi.Length; i++)
+		{
+			Checkpoint testii = (Checkpoint) testi[i].GetComponent("Checkpoint");
+			testii.check = false;
+		}
+		
+		/*other = (Checkpoint) GameObject.Find("CheckPoint").GetComponent("Checkpoint");
+				other.check = false;*/
+		currentCheckPoint = lähtö;
+		elamat = 4;
+
+	}
+
+	void kuolemareset(){
 		rigidbody2D.fixedAngle = true;
 		rigidbody2D.fixedAngle = false;
 		rigidbody2D.velocity = new Vector3(0, 0, 0);
-		elamat--;
-		if (elamat == 0 && kuolemaperm == true)
-		{
-			
-			GameObject[] testi = GameObject.FindGameObjectsWithTag("Checkpoint");
-			for (int i = 0; i < testi.Length; i++)
-			{
-				Checkpoint testii = (Checkpoint) testi[i].GetComponent("Checkpoint");
-				testii.check = false;
-			}
-			
-			/*other = (Checkpoint) GameObject.Find("CheckPoint").GetComponent("Checkpoint");
-				other.check = false;*/
-			currentCheckPoint = lähtö;
-			elamat = 4;
-		}
-		
-		transform.position = currentCheckPoint;
-		
+		rigidbody2D.angularVelocity = 0;
+
+
 	}
+
+	void spawn(){
+		elamat--;
+		Time.timeScale = 1;
+		pause = 0;
+		paussik = 0;
+		jump = 0;
+		transform.position = currentCheckPoint;
+
+	}
+
+
+
+
+	}
+
+
 	
-}
