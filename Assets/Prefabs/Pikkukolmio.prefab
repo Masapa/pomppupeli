@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
-  - 61: {fileID: 6100002}
-  - 61: {fileID: 6100000}
+  - 60: {fileID: 6000002}
+  - 60: {fileID: 6000004}
   m_Layer: 0
   m_Name: Pikkukolmio
   m_TagString: Maa
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 248.523239, y: -34.7706146, z: 0}
+  m_LocalPosition: {x: 187.370941, y: -35.0559502, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,18 +38,15 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 44c88ca83e832a440b3697d0e99ad131, type: 2}
+  m_Material: {fileID: 6200000, guid: 317bb660e1df8684f8412d686cf597e3, type: 2}
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: -1.94000006, y: 2}
-      - {x: -2, y: 2}
-      - {x: -.42407465, y: .0712161064}
-      - {x: 2.00496817, y: -2}
-      - {x: 2, y: -1.94000006}
-      - {x: 1.99000001, y: -1.92999995}
---- !u!61 &6100000
-BoxCollider2D:
+    - - {x: -2, y: 1.995}
+      - {x: -2, y: -1.995}
+      - {x: -1.36439514, y: -.193328857}
+--- !u!60 &6000002
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,19 +54,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 8f31ca8540aea3645a174f9968e51891, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 3.95528769, y: .0538768768}
-  m_Center: {x: -.0223555565, y: -1.96806145}
---- !u!61 &6100002
-BoxCollider2D:
+  m_Poly:
+    m_Paths:
+    - - {x: -.188861847, y: -1.5594635}
+      - {x: -2, y: -1.995}
+      - {x: 2, y: -1.995}
+--- !u!60 &6000004
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 317bb660e1df8684f8412d686cf597e3, type: 2}
+  m_Material: {fileID: 6200000, guid: 44c88ca83e832a440b3697d0e99ad131, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .0977115631, y: 3.88788176}
-  m_Center: {x: -1.9511447, y: .0035879612}
+  m_Poly:
+    m_Paths:
+    - - {x: -1.99977112, y: 1.99475861}
+      - {x: -.42407465, y: .0712161064}
+      - {x: 1.99905777, y: -1.99403381}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
