@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
-  - 60: {fileID: 6000000}
   - 60: {fileID: 6000002}
+  - 60: {fileID: 6000000}
   m_Layer: 0
   m_Name: Piikit_3
   m_TagString: Piikki
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.45974, y: -65.8239288, z: 0}
+  m_LocalPosition: {x: 25.3537807, y: 67.394722, z: 0}
   m_LocalScale: {x: 1.11803401, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,8 +42,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: 1.74738312, y: -.524009705}
-      - {x: -1.76930237, y: -.524436951}
+    - - {x: -.00237464905, y: -.449108124}
       - {x: -1.76568604, y: .561439514}
       - {x: -2.00062084, y: -.281526029}
       - {x: -2, y: -.75}
@@ -61,10 +60,9 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_Poly:
     m_Paths:
-    - - {x: -1.7431339, y: .541987419}
-      - {x: -1.74452639, y: -.499632865}
-      - {x: 1.72855222, y: -.50595361}
-      - {x: 1.73406279, y: .538325608}
+    - - {x: -1.74863911, y: .555961609}
+      - {x: -.000386238098, y: -.427639008}
+      - {x: 1.73339462, y: .551261902}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
