@@ -80,6 +80,7 @@ MonoBehaviour:
   currentCheckPoint: {x: 0, y: 0, z: 0}
   use: 0
   Inertia: 1
+  pause: 0
   horizontal: 0
   kuolemaperm: 0
 --- !u!212 &21200000
