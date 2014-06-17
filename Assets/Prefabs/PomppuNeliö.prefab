@@ -9,13 +9,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 60: {fileID: 6000000}
-  - 61: {fileID: 6100002}
   - 61: {fileID: 6100000}
+  - 61: {fileID: 6100002}
+  - 61: {fileID: 6100004}
+  - 61: {fileID: 6100006}
   m_Layer: 0
-  m_Name: Puolikolmio
+  m_Name: "PomppuNeli\xF6"
   m_TagString: Maa
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: e2e8b92b522da254e818169c8ce04b57, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -26,25 +27,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 116.426399, y: -4.78890753, z: 0}
-  m_LocalScale: {x: 1, y: .5, z: 1}
+  m_LocalPosition: {x: 262.048248, y: -67.895256, z: -.0052289553}
+  m_LocalScale: {x: 1.25, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!60 &6000000
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 44c88ca83e832a440b3697d0e99ad131, type: 2}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: -2.00009155, y: 1.99505615}
-      - {x: -.42407465, y: .0712161064}
-      - {x: 2.00007629, y: -1.99438477}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -52,10 +39,10 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 8f31ca8540aea3645a174f9968e51891, type: 2}
+  m_Material: {fileID: 6200000, guid: cd3de787b0dcaca47aa04d7774bbb4eb, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 3.84494138, y: .119564056}
-  m_Center: {x: -.0775146484, y: -1.92770386}
+  m_Size: {x: 4, y: .119710445}
+  m_Center: {x: 0, y: 1.94015503}
 --- !u!61 &6100002
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -63,10 +50,32 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 317bb660e1df8684f8412d686cf597e3, type: 2}
+  m_Material: {fileID: 6200000, guid: cd3de787b0dcaca47aa04d7774bbb4eb, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .0978848934, y: 3.8508625}
-  m_Center: {x: -1.95065308, y: -.0565185547}
+  m_Size: {x: 4, y: .1317873}
+  m_Center: {x: 0, y: -1.93410873}
+--- !u!61 &6100004
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: cd3de787b0dcaca47aa04d7774bbb4eb, type: 2}
+  m_IsTrigger: 0
+  m_Size: {x: .0808856487, y: 3.73806906}
+  m_Center: {x: -1.95955658, y: .00208473206}
+--- !u!61 &6100006
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: cd3de787b0dcaca47aa04d7774bbb4eb, type: 2}
+  m_IsTrigger: 0
+  m_Size: {x: .100026608, y: 3.76434326}
+  m_Center: {x: 1.94999504, y: .00887680054}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -87,7 +96,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: df60d1ccf75af3f4f854a6fa7a719769, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df60d1ccf75af3f4f854a6fa7a719769, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
