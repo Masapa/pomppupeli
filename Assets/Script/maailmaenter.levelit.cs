@@ -15,6 +15,7 @@ public partial class maailmaenter : MonoBehaviour {
 			levut.Add ("piikkipaikka1");
 			levut.Add ("alkupolku");
 			levut.Add ("Ilomaa_1");
+			levut.Add ("Ilomaa_2");
 			levut.Add ("level1");
 			levut.Add ("level2");
 			levut.Add ("level3");
