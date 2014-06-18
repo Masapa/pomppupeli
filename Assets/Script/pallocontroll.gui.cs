@@ -10,7 +10,7 @@ void OnGUI()
 	
 	
 	GUI.Label (new Rect (280, 10, 250, 100), "Nopeus x: " + rigidbody2D.velocity.x + "\nNopeus y: " + rigidbody2D.velocity.y + "\nMaxSpinni x: " + maxspin);
-	GUI.Label (new Rect (10, 10, 250, 100), "Kosketuksen y: " + koskeey + "\nKosketuksen x: " + koskeex + "\nElämät: " + elamat + "\nAika: " + Time.timeSinceLevelLoad);
+	GUI.Label (new Rect (10, 10, 250, 100), "Kosketuksen y: " + koskeey + "\nKosketuksen x: " + koskeex + "\nElamat: " + elamat + "\nAika: " + Time.timeSinceLevelLoad);
 	
 	GUIStyle buttoni = new GUIStyle ("Button");
 	buttoni.name = "buttoni";

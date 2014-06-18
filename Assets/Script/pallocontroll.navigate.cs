@@ -19,6 +19,8 @@ public partial class Pallocontroll: MonoBehaviour
 
 
 	void liikkuminen(){
+
+
 		if (Input.GetKeyDown (Return) && pause == 0) {
 			kuolema ();
 			spawn ();
@@ -43,6 +45,19 @@ public partial class Pallocontroll: MonoBehaviour
 		//Debug.Log (currentCheckPoint.y);
 		//float horizontal;// = Input.GetAxis ("Horizontal");
 		//Debug.Log (horizontal);
+
+		if (Input.GetKeyDown (up) && pause == 0) {
+			if (jump == 1)
+			{
+			//	if(rigidbody2D.velocity.y<0){rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,10f);}
+				rigidbody2D.AddForce(Vector2.up * jumpSpeed);
+				jump = 0;
+			}
+				ylos = true;
+		} else
+			ylos = false;
+
+		
 		
 		if (Input.GetKey(down) && koskee == 1 && pause == 0)
 		{
@@ -57,7 +72,7 @@ public partial class Pallocontroll: MonoBehaviour
 				yleinentmp = 1;
 				transform.position = temppi;
 				
-				rigidbody2D.gravityScale = 0;
+				//rigidbody2D.gravityScale = 0;
 				rigidbody2D.inertia = 3.1f;
 				
 			}
@@ -85,15 +100,21 @@ public partial class Pallocontroll: MonoBehaviour
 		if (Input.GetKey (left) && pause == 0) {
 						horizontal = -1;
 						vasen = true;
-		} else {vasen = false;
-						if (Input.GetKey (right) && pause == 0) {
+				} else {
+						vasen = false;
+				}
+		if (Input.GetKey (right) && pause == 0) {
 								horizontal = 1;
 								oikea = true;
 						} else {
 								oikea = false;
-								horizontal = 0;
+								
 						}
-				}
+
+		if (!(Input.GetKey (right) || Input.GetKey (left))) {
+			horizontal = 0;		
+		}
+				
 		
 		
 		if (Input.GetKeyDown (escape)) 
@@ -104,10 +125,6 @@ public partial class Pallocontroll: MonoBehaviour
 		
 		
 		
-		if (Input.GetKeyDown (up) && pause == 0) {
-						ylos = true;
-				} else
-						ylos = false;
 
 	}
 
@@ -155,20 +172,6 @@ public partial class Pallocontroll: MonoBehaviour
 			tuplasaa = false;
 
 		}
-
-
-		if (ylos) {
-				
-			if (jump == 1)
-			{
-				
-				rigidbody2D.AddForce(Vector2.up * jumpSpeed);
-				jump = 0;
-				
-			}
-		}
-
-
 
 
 		if (horizontal != 0)
