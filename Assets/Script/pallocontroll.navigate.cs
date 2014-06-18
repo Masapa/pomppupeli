@@ -12,6 +12,11 @@ public partial class Pallocontroll: MonoBehaviour
 	KeyCode down = KeyCode.DownArrow;
 	KeyCode escape = KeyCode.Escape;
 
+	bool vasen = false;
+	bool oikea = false;
+	bool ylos = false;
+	bool alas = false;
+
 
 	void liikkuminen(){
 		if (Input.GetKeyDown (Return) && pause == 0) {
@@ -41,6 +46,7 @@ public partial class Pallocontroll: MonoBehaviour
 		
 		if (Input.GetKey(down) && koskee == 1 && pause == 0)
 		{
+			alas = true;
 			if ((koskeex < 1 && koskeex > -1) && koskeey > 0)
 			{
 				if (yleinentmp == 0)
@@ -58,6 +64,7 @@ public partial class Pallocontroll: MonoBehaviour
 		}
 		else
 		{
+			alas = false;
 			yleinentmp = 0;
 			rigidbody2D.gravityScale = gravity;
 			maxTorque = minTorque1;
@@ -75,55 +82,95 @@ public partial class Pallocontroll: MonoBehaviour
 			righttupla = Time.timeSinceLevelLoad;
 			
 		}
-		if (Input.GetKey(left) && pause == 0)
+		if (Input.GetKey (left) && pause == 0) {
+						horizontal = -1;
+						vasen = true;
+		} else {vasen = false;
+						if (Input.GetKey (right) && pause == 0) {
+								horizontal = 1;
+								oikea = true;
+						} else {
+								oikea = false;
+								horizontal = 0;
+						}
+				}
+		
+		
+		if (Input.GetKeyDown (escape)) 
 		{
-			if (Time.timeSinceLevelLoad - lefttupla < tuplaaika)
-			{
-				Debug.Log("testi " + Time.timeSinceLevelLoad);
+			if(pause == 0){pause = 1;}else pause = 0;
+		}
+		
+		
+		
+		
+		if (Input.GetKeyDown (up) && pause == 0) {
+						ylos = true;
+				} else
+						ylos = false;
+
+	}
+
+
+	void FixedUpdate(){
+		if (vasen) {
+
+			if (Time.timeSinceLevelLoad - lefttupla < tuplaaika) {
 				tuplasaa = true;
 				
 			}
-			if (tuplasaa == true)
-			{
+			if (tuplasaa == true) {
 				
-				rigidbody2D.angularVelocity = Mathf.Abs(rigidbody2D.angularVelocity);
+				rigidbody2D.angularVelocity = Mathf.Abs (rigidbody2D.angularVelocity);
 				//rigidbody2D.AddTorque(100);
 				
 			}
 			tuplasaa = false;
-			
-			horizontal = -1;
 			if (rigidbody2D.angularVelocity < maxTorque)
 			{
 				rigidbody2D.AddTorque(pyoriminen);
 			}
+
 		}
-		else if (Input.GetKey(right) && pause == 0)
-		{
-			
-			if (Time.timeSinceLevelLoad - righttupla < tuplaaika)
-			{
-				Debug.Log("testi " + Time.timeSinceLevelLoad);
+
+		if (oikea) {
+
+			if (Time.timeSinceLevelLoad - righttupla < tuplaaika) {
+				
 				tuplasaa = true;
 				
 			}
-			if (tuplasaa == true)
-			{
 				
-				rigidbody2D.angularVelocity = -Mathf.Abs(rigidbody2D.angularVelocity);
-				//rigidbody2D.AddTorque(100);
-				
-			}
-			tuplasaa = false;
-			horizontal = 1;
 			if (rigidbody2D.angularVelocity > -maxTorque)
 			{
 				rigidbody2D.AddTorque(-pyoriminen);
 			}
+
+			if (tuplasaa == true) {
+				
+				rigidbody2D.angularVelocity = -Mathf.Abs (rigidbody2D.angularVelocity);
+				//rigidbody2D.AddTorque(100);
+				
+			}
+			tuplasaa = false;
+
 		}
-		else
-			horizontal = 0;
-		
+
+
+		if (ylos) {
+				
+			if (jump == 1)
+			{
+				
+				rigidbody2D.AddForce(Vector2.up * jumpSpeed);
+				jump = 0;
+				
+			}
+		}
+
+
+
+
 		if (horizontal != 0)
 		{
 			rigidbody2D.AddForce(Vector2.right * horizontal * speed);
@@ -142,26 +189,9 @@ public partial class Pallocontroll: MonoBehaviour
 				
 			}
 		}
-		
-		
-		if (Input.GetKeyDown (escape)) 
-		{
-			if(pause == 0){pause = 1;}else pause = 0;
-		}
-		
-		
-		
-		
-		if (Input.GetKeyDown(up) && pause == 0)
-		{
-			if (jump == 1)
-			{
-				
-				rigidbody2D.AddForce(Vector2.up * jumpSpeed);
-				jump = 0;
-				
-			}
-		}
+
+
+
 
 	}
 

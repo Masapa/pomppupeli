@@ -82,6 +82,7 @@ MonoBehaviour:
   Inertia: 1
   pause: 0
   horizontal: 0
+  elamat: 0
   kuolemaperm: 0
 --- !u!212 &21200000
 SpriteRenderer:

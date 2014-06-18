@@ -27,7 +27,7 @@ public partial class Pallocontroll: MonoBehaviour
 	float lefttupla;
 	float righttupla;
 	public float horizontal;
-	int elamat;
+	public int elamat;
 	float vertical;
 	float tmp;
 	float yleinentmp = 0;
