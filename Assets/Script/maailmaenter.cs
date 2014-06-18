@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
-public class maailmaenter : MonoBehaviour {
+public partial class maailmaenter : MonoBehaviour {
 	public string maa;
 	public Sprite spritee;
 	public bool forseauki = false;
@@ -15,33 +15,12 @@ public class maailmaenter : MonoBehaviour {
 	List<float> aika;
 	List<int> kuolemat;
 	// Use this for initialization
-	void OnLevelWasLoaded(int level){
-		kuolemat = new List<int> ();
-		levut = new List<string>();
-		tilanne = new List<int> ();
-		aika = new List<float> ();
-		//tähän pitää laittaa levujen nimet.
-		//maailma1 == 2
-		if (level == 2) {
-			levut.Add ("piikkipaikka1");
-			levut.Add ("alkupolku");
-			levut.Add ("Ilomaa_1");
-			levut.Add ("level1");
-			levut.Add ("level2");
-			levut.Add ("level3");
-			levut.Add ("level4");
-			levut.Add ("level5");
-			levut.Add ("POMPPUFIILIS");
-			levut.Add ("alku");
-			prefit ();
-			}
-		
-		
-	}
+
 
 
 
 	void Start () {
+	
 
 
 		for (i=0; i<levut.Count; i++) {
@@ -71,11 +50,6 @@ public class maailmaenter : MonoBehaviour {
 
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnTriggerStay2D(Collider2D c) {
 		if (other.use == true && (sprait.sprite == spritee || forseauki == true)) {
@@ -87,18 +61,10 @@ public class maailmaenter : MonoBehaviour {
 	}
 
 
-	void prefit(){
-
-		foreach (string k in levut) {
-			aika.Add (PlayerPrefs.GetFloat(k+"levuscore"));
-			tilanne.Add (PlayerPrefs.GetInt (k+"levutilanne"));
-			kuolemat.Add (PlayerPrefs.GetInt (k+"lives"));
-		
-		}
-	
-	}
-
-
-
 
 }
+
+
+
+
+
