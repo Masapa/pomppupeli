@@ -31,3 +31,5 @@ EditorBuildSettings:
     path: Assets/Scenes/piikkipaikka1.unity
   - enabled: 1
     path: Assets/Scenes/Ilomaa_1.unity
+  - enabled: 1
+    path: Assets/Scenes/Ilomaa_2.unity

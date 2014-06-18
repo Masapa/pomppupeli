@@ -15,6 +15,7 @@ public class PlayerCam : MonoBehaviour
 	public bool cameraFollowHeight = true; // camera follow CameraTarget object height
 	public float cameraHeight = 2.5f; // height of camera adjustable
 	public Vector2 velocity; // speed of camera movement
+	public float zoom =11;
 	
 	private Transform thisTransform; // camera Transform
 
@@ -28,6 +29,7 @@ public class PlayerCam : MonoBehaviour
 			smoothTime = 0.6F;}
 		if (smoothTimex == 0) {
 			smoothTimex = smoothTime;}
+		transform.camera.orthographicSize = zoom;
 		cameraTarget =  (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
 		player = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
 		transform.position = new Vector3 (0, 0, -15);
