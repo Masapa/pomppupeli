@@ -33,3 +33,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Ilomaa_1.unity
   - enabled: 1
     path: Assets/Scenes/Ilomaa_2.unity
+  - enabled: 1
+    path: Assets/Scenes/Ilomaa_3.unity
