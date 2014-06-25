@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 using System.Collections.Generic;
-public partial class maailmaenter : MonoBehaviour {
+public class maailmaenter : MonoBehaviour {
 	public string maa;
 	public Sprite spritee;
 	public bool forseauki = false;
@@ -10,17 +10,22 @@ public partial class maailmaenter : MonoBehaviour {
 	int i;
 	Pallocontroll other;
 
-	List<string> levut;
-	List<int> tilanne;
-	List<float> aika;
-	List<int> kuolemat;
 	// Use this for initialization
+
+	 List<string> levut;
+	 List<int> tilanne;
+	 List<float> aika;
+	 List<int> kuolemat;
 
 
 
 
 	void Start () {
-	
+		maailmakontrolli testi = FindObjectOfType (typeof(maailmakontrolli)) as maailmakontrolli;
+		levut = testi.levut;
+		tilanne = testi.tilanne;
+		aika = testi.aika;
+		kuolemat = testi.kuolemat;
 
 
 		for (i=0; i<levut.Count; i++) {
