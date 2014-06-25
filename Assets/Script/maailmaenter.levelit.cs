@@ -12,18 +12,20 @@ public partial class maailmaenter : MonoBehaviour {
 		//tähän pitää laittaa levujen nimet.
 		//maailma1 == 2
 		if (level == 2) {
-			levut.Add ("piikkipaikka1");
 			levut.Add ("alkupolku");
 			levut.Add ("Ilomaa_1");
 			levut.Add ("Ilomaa_2");
 			levut.Add ("Ilomaa_3");
+			levut.Add ("piikkipaikka1");
+			levut.Add ("piikkipaikka2");
+			levut.Add ("alku");
 			levut.Add ("level1");
 			levut.Add ("level2");
 			levut.Add ("level3");
 			levut.Add ("level4");
 			levut.Add ("level5");
 			levut.Add ("POMPPUFIILIS");
-			levut.Add ("alku");
+
 			prefit ();
 		}
 		

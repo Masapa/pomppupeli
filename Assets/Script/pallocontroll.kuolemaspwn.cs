@@ -3,9 +3,8 @@ using System.Collections;
 
 public partial class Pallocontroll: MonoBehaviour
 {
-	
-	
-	
+
+	public bool kuollut = false;
 	
 	void kuolematesti()
 	{
@@ -20,6 +19,7 @@ public partial class Pallocontroll: MonoBehaviour
 	//kuolema testi
 	public void kuolema()
 	{
+
 		
 		Time.timeScale = 0;
 		paussik = 1;
@@ -58,12 +58,18 @@ public partial class Pallocontroll: MonoBehaviour
 	}
 	
 	void spawn(){
+		ilopala[] testi = FindObjectsOfType(typeof(ilopala)) as ilopala[];
+		foreach (ilopala t in testi) {
+			t.kuollut();		
+		}
+
 		elamat--;
 		Time.timeScale = 1;
 		pause = 0;
 		paussik = 0;
 		jump = 0;
 		transform.position = currentCheckPoint;
+		kuollut = false;
 		
 	}
 	

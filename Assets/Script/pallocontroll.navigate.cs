@@ -23,6 +23,7 @@ public partial class Pallocontroll: MonoBehaviour
 
 		if (Input.GetKeyDown (Return) && pause == 0) {
 			kuolema ();
+
 			spawn ();
 			
 		}

@@ -9,11 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
+  - 60: {fileID: 6000002}
   - 61: {fileID: 6100000}
+  - 61: {fileID: 6100002}
   m_Layer: 0
-  m_Name: Checkpoint_lisari
-  m_TagString: Checkpoint
+  m_Name: sivukikkapiikkihomma
+  m_TagString: Maa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,12 +25,30 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.275219, y: -14.1542616, z: -.884996712}
-  m_LocalScale: {x: 1.71747887, y: 1.89644647, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: 53.4139786, y: -20.2877636, z: -.884996712}
+  m_LocalScale: {x: 1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!60 &6000002
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: 44c88ca83e832a440b3697d0e99ad131, type: 2}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: -2.00009155, y: 1.99505615}
+      - {x: -.42407465, y: .0712161064}
+      - {x: 5.97833776, y: -5.77137184}
+      - {x: 6.34368181, y: -3.37114906}
+      - {x: 6.22996569, y: -5.1220417}
+      - {x: 6.00483561, y: -5.98459053}
+      - {x: 2.00007629, y: -1.99438477}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -37,25 +56,21 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1, y: 2.2314086}
-  m_Center: {x: 0, y: .00175804866}
---- !u!114 &11400000
-MonoBehaviour:
+  m_Material: {fileID: 6200000, guid: 317bb660e1df8684f8412d686cf597e3, type: 2}
+  m_IsTrigger: 0
+  m_Size: {x: .0978848934, y: 3.8508625}
+  m_Center: {x: -1.95065308, y: -.0565185547}
+--- !u!61 &6100002
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a41112b9615b5374798bfd7455b253a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCheckPoint: {x: 0, y: 0, z: 0}
-  check: 0
-  givelives: 1
-  amount: 3
+  m_Material: {fileID: 6200000, guid: 8f31ca8540aea3645a174f9968e51891, type: 2}
+  m_IsTrigger: 0
+  m_Size: {x: 3.84494138, y: .119564056}
+  m_Center: {x: -.0775146484, y: -1.92770386}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -74,9 +89,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 2066776757
+  m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 603a5f17f829fe543a02890fadeb059e, type: 3}
+  m_Sprite: {fileID: 21300002, guid: df60d1ccf75af3f4f854a6fa7a719769, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
