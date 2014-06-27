@@ -4,6 +4,7 @@ using System.Collections;
 public class voitto : MonoBehaviour {
 	int i ;
 	Pallocontroll other;
+	public bool lapaisty = false;
 	// Use this for initialization
 	void Start () {
 		other = (Pallocontroll) GameObject.Find("Pallo").GetComponent("Pallocontroll");
@@ -17,6 +18,8 @@ public class voitto : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D() {
+		maailmakontrolli maailmat = FindObjectOfType<maailmakontrolli> ();
+		maailmat.lapaisty = true;
 		PlayerPrefs.SetInt ("currentlevel", 1);
 		int lifes = PlayerPrefs.GetInt (Application.loadedLevelName + "lives");
 		if (Mathf.Abs(lifes) > Mathf.Abs(other.getElamat ()) || lifes == 0) {

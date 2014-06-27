@@ -71,10 +71,10 @@ MonoBehaviour:
   deathy: -400
   tuplaaika: .25
   speed: 2.75
-  jumpSpeed: 1500
-  maxTorque1: 2000
+  jumpSpeed: 1200
+  maxTorque1: 2050
   PlayerElamant: 0
-  minTorque1: 1000
+  minTorque1: 1200
   pyoriminen: 80
   CP: {fileID: 0}
   currentCheckPoint: {x: 0, y: 0, z: 0}
