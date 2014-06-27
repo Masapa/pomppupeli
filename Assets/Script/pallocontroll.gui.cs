@@ -27,7 +27,10 @@ void OnGUI()
 			Application.LoadLevel(Application.loadedLevel);
 		}	
 		if(GUI.Button (new Rect((Screen.width/2)-(width/2),(Screen.height/2)+(height),width,height),"Exit",buttoni)){
-			Application.LoadLevel("maailma1");
+				if(GameObject.Find ("maailmat")){
+					Application.LoadLevel(((maailmakontrolli) FindObjectOfType(typeof(maailmakontrolli))).edellinen);
+
+				}else Application.LoadLevel("maailma1");
 		}	
 		
 		
