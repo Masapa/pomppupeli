@@ -20,6 +20,7 @@ public class ilopala : MonoBehaviour {
 	}
 	public void kuollut(){
 		rigidbody2D.velocity = Vector2.zero;
+		rigidbody2D.angularVelocity = 0.0f;
 		transform.eulerAngles = Vector2.zero;
 		transform.position = alku;	
 

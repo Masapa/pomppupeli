@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0322811306, y: 185.733551, z: 0}
+  m_LocalPosition: {x: 287.288147, y: -57.8073769, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,7 +39,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 100000}
   m_Mass: 3
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 1
   m_GravityScale: 1.39999998
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441c9ed31b88df4b8fd7d7ebee480c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathy: -20
+  deathy: -400
   tuplaaika: .25
   speed: 2.75
   jumpSpeed: 1500
@@ -84,6 +84,7 @@ MonoBehaviour:
   horizontal: 0
   elamat: 0
   kuolemaperm: 0
+  kuollut: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
