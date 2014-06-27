@@ -11,6 +11,7 @@ public partial class Pallocontroll: MonoBehaviour
 	KeyCode up = KeyCode.UpArrow;
 	KeyCode down = KeyCode.DownArrow;
 	KeyCode escape = KeyCode.Escape;
+	KeyCode restart = KeyCode.R;
 
 	bool vasen = false;
 	bool oikea = false;
@@ -19,6 +20,11 @@ public partial class Pallocontroll: MonoBehaviour
 
 
 	void liikkuminen(){
+
+		if (Input.GetKeyDown (restart) && pause == 0) {
+			Application.LoadLevel(Application.loadedLevel);		
+		
+		}
 
 
 		if (Input.GetKeyDown (Return) && pause == 0) {
@@ -71,7 +77,7 @@ public partial class Pallocontroll: MonoBehaviour
 					maxTorque = maxTorque1;
 				}
 				yleinentmp = 1;
-				transform.position = temppi;
+				if(!kuollut){transform.position = temppi;}
 				
 				//rigidbody2D.gravityScale = 0;
 				rigidbody2D.inertia = 3.1f;

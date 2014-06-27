@@ -19,8 +19,8 @@ public partial class Pallocontroll: MonoBehaviour
 	//kuolema testi
 	public void kuolema()
 	{
+		kuollut = true;
 
-		
 		Time.timeScale = 0;
 		paussik = 1;
 		kuolemareset ();
@@ -44,7 +44,7 @@ public partial class Pallocontroll: MonoBehaviour
 		/*other = (Checkpoint) GameObject.Find("CheckPoint").GetComponent("Checkpoint");
 				other.check = false;*/
 		currentCheckPoint = lahto;
-		elamat = 4;
+		elamat = 0;
 		
 	}
 	
@@ -63,7 +63,7 @@ public partial class Pallocontroll: MonoBehaviour
 			t.kuollut();		
 		}
 
-		elamat--;
+		elamat++;
 		Time.timeScale = 1;
 		pause = 0;
 		paussik = 0;

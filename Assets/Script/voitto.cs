@@ -18,19 +18,21 @@ public class voitto : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D() {
-		maailmakontrolli maailmat = FindObjectOfType<maailmakontrolli> ();
-		maailmat.lapaisty = true;
+		if (GameObject.Find ("maailmat")) {
+						maailmakontrolli maailmat = FindObjectOfType<maailmakontrolli> ();
+						maailmat.lapaisty = true;
+			maailmat.achitesti();
+				}
 		PlayerPrefs.SetInt ("currentlevel", 1);
 		int lifes = PlayerPrefs.GetInt (Application.loadedLevelName + "lives");
-		if (Mathf.Abs(lifes) > Mathf.Abs(other.getElamat ()) || lifes == 0) {
+		float tmp = PlayerPrefs.GetFloat (Application.loadedLevelName+"levuscore");
+		if ((tmp > Time.timeSinceLevelLoad || tmp == 0)) {
 			lifes = other.getElamat ();
 			PlayerPrefs.SetInt (Application.loadedLevelName+"lives",lifes);
-		}
-		float tmp = PlayerPrefs.GetFloat (Application.loadedLevelName+"levuscore");
-		if (tmp > Time.timeSinceLevelLoad || tmp == 0) {
-						tmp = Time.timeSinceLevelLoad;
+			tmp = Time.timeSinceLevelLoad;
 			PlayerPrefs.SetFloat(Application.loadedLevelName+"levuscore",tmp);
-				}
+		}
+
 
 		int tmp2 = PlayerPrefs.GetInt (Application.loadedLevelName+"levutilanne");
 		tmp2 = 1;

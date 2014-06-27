@@ -24,7 +24,7 @@ public partial class maailmakontrolli : MonoBehaviour {
 
 	}
 	void Update(){
-		achitesti ();
+		//achitesti ();
 
 	}
 	// Update is called once per frame

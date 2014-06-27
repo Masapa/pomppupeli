@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 public partial class maailmakontrolli : MonoBehaviour {
 	//achis
-
-	string levunimi = Application.loadedLevelName;
+	public int achipala = 0;
+	public string levunimi;
 	public bool lapaisty = false;
-	void achitesti(){
+	public void achitesti(){
 		if (levunimi == "piikkipaikka2") {
 			if(lapaisty && aikaachi(20)){
 				Debug.Log ("ACHI GET!");
@@ -20,7 +20,12 @@ public partial class maailmakontrolli : MonoBehaviour {
 		}
 
 
-
+		if (achipala == 1 && levunimi == "maailma1") {
+			Debug.Log ("You got mail!");
+			etsinelio (0, 0);
+		
+		
+		}
 
 
 
@@ -40,6 +45,11 @@ public partial class maailmakontrolli : MonoBehaviour {
 		}
 		return false;
 		
+	}
+
+	public void levunimii(string levu){
+		levunimi = levu;
+
 	}
 
 
