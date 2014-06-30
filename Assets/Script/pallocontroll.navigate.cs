@@ -57,7 +57,9 @@ public partial class Pallocontroll: MonoBehaviour
 			if (jump == 1)
 			{
 			//	if(rigidbody2D.velocity.y<0){rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,10f);}
-				rigidbody2D.AddForce(Vector2.up * jumpSpeed);
+				rigidbody2D.AddForce(new Vector2(0,1900));
+				//if(rigidbody2D.velocity.y <=0){rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x,9);}else
+				//if(rigidbody2D.velocity.y >0){rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x,rigidbody2D.velocity.y+9);}
 				jump = 0;
 			}
 				ylos = true;
