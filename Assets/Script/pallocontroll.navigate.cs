@@ -18,7 +18,8 @@ public partial class Pallocontroll: MonoBehaviour
 	bool ylos = false;
 	bool alas = false;
 
-
+	int jump2 = 0;
+	float alku;
 	void liikkuminen(){
 
 		if (Input.GetKeyDown (restart) && pause == 0) {
@@ -48,23 +49,34 @@ public partial class Pallocontroll: MonoBehaviour
 		{
 			
 		}
-		
+
 		//Debug.Log (currentCheckPoint.y);
 		//float horizontal;// = Input.GetAxis ("Horizontal");
 		//Debug.Log (horizontal);
 
-		if (Input.GetKeyDown (up) && pause == 0) {
+
+		if(Input.GetKeyDown(up)){alku = Time.timeSinceLevelLoad;}
+		if (Input.GetKeyDown(up) && pause == 0) {
 			if (jump == 1)
 			{
 			//	if(rigidbody2D.velocity.y<0){rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,10f);}
-				rigidbody2D.AddForce(new Vector2(0,1900));
+				rigidbody2D.AddForce(new Vector2(0,1200));
+				jump = 0;
+				jump2 = 1;
 				//if(rigidbody2D.velocity.y <=0){rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x,9);}else
 				//if(rigidbody2D.velocity.y >0){rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x,rigidbody2D.velocity.y+9);}
-				jump = 0;
+
 			}
 				ylos = true;
 		} else
 			ylos = false;
+
+		if (Input.GetKey (up)) {
+			if(Time.timeSinceLevelLoad-alku >=0.1f && jump2 == 1){Debug.Log ("korkea");rigidbody2D.AddForce(new Vector2(0,1900-1200));jump2 = 0;}}
+
+//		if (Input.GetKeyUp (space)) {
+//			if(Time.timeSinceLevelLoad-alku<=0.1f){Debug.Log ("matala");rigidbody2D.AddForce(new Vector2(0,1200));jump = 0;}		
+//		}
 
 		
 		

@@ -43,6 +43,7 @@ public partial class maailmakontrolli : MonoBehaviour {
 			edellinen = "menu";		
 		
 		}
+		edellinen = "maailma1";
 
 	}
 
