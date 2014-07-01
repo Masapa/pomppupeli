@@ -219,7 +219,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Text: "El\xE4m\xE4t:"
+  m_Text: 'Kuolemat:'
   m_OffsetZ: -1
   m_CharacterSize: .0500000007
   m_LineSpacing: 1

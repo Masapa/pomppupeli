@@ -13,18 +13,25 @@ public partial class maailmakontrolli : MonoBehaviour {
 	public string edellinen;
 	// Use this for initialization
 	void Start () {
+		achit = new List<string> ();
 		maailmat = new List<string> ();
 		//LISÄTÄÄN mailmat listaan
 		//Levut laitetaan levut listaan.
 		maailmat.Add ("maailma1");
 		//
 
+		//achinimet
+		achit.Add ("Ovi auki!"); //maailma1 ovi
+		achit.Add ("No pain, No gain"); //piikkipaikka1 salari.
+
+
+
 		hubitarkistus ();
 		startissa ();
 
 	}
 	void Update(){
-		achitesti ();
+		//achitesti ();
 
 	}
 	// Update is called once per frame

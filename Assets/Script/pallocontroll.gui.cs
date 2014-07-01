@@ -8,9 +8,17 @@ void OnGUI()
 {
 	
 	
-	
-	GUI.Label (new Rect (280, 10, 250, 100), "Nopeus x: " + rigidbody2D.velocity.x + "\nNopeus y: " + rigidbody2D.velocity.y + "\nMaxSpinni x: " + maxspin);
-	GUI.Label (new Rect (10, 10, 250, 100), "Kosketuksen y: " + koskeey + "\nKosketuksen x: " + koskeex + "\nElamat: " + elamat + "\nAika: " + Time.timeSinceLevelLoad);
+		GUI.backgroundColor = Color.yellow ;
+		GUIStyle asd = new GUIStyle ("label");
+		Texture2D testitexture = new Texture2D (1, 1);
+		asd.normal.background = testitexture;
+		testitexture.SetPixel (1, 1, new Color(0,0,0,0.5f));
+		testitexture.Apply ();
+
+		asd.fixedWidth = 180;
+		asd.fixedHeight = 80;
+	GUI.Label (new Rect (280, 10, 250, 100), "Nopeus x: " + rigidbody2D.velocity.x + "\nNopeus y: " + rigidbody2D.velocity.y + "\nMaxSpinni x: " + maxspin,asd);
+	GUI.Label (new Rect (10, 10, 250, 100), "Kosketuksen y: " + koskeey + "\nKosketuksen x: " + koskeex + "\nKuolemat: " + elamat + "\nAika: " + Time.timeSinceLevelLoad,asd);
 	
 	GUIStyle buttoni = new GUIStyle ("Button");
 	buttoni.name = "buttoni";
