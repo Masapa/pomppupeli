@@ -72,7 +72,7 @@ public partial class Pallocontroll: MonoBehaviour
 			ylos = false;
 
 		if (Input.GetKey (up)) {
-			if(Time.timeSinceLevelLoad-alku >=0.1f && jump2 == 1){Debug.Log ("korkea");rigidbody2D.AddForce(new Vector2(0,1900-1200));jump2 = 0;}}
+			if(Time.timeSinceLevelLoad-alku >=0.2f && jump2 == 1){Debug.Log ("korkea");rigidbody2D.AddForce(new Vector2(0,1900-1200));jump2 = 0;}}
 
 //		if (Input.GetKeyUp (space)) {
 //			if(Time.timeSinceLevelLoad-alku<=0.1f){Debug.Log ("matala");rigidbody2D.AddForce(new Vector2(0,1200));jump = 0;}		
