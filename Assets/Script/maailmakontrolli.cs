@@ -6,6 +6,7 @@ public partial class maailmakontrolli : MonoBehaviour {
 	public List<int> tilanne;
 	public List<float> aika;
 	public List<int> kuolemat;
+	public string vikamaa;
 	List<string> maailmat;
 	//tähän pitää laittaa levujen nimet.
 	//maailma1 == 2
@@ -18,6 +19,7 @@ public partial class maailmakontrolli : MonoBehaviour {
 		//LISÄTÄÄN mailmat listaan
 		//Levut laitetaan levut listaan.
 		maailmat.Add ("maailma1");
+		maailmat.Add ("maailma2");
 		//
 
 		//achinimet

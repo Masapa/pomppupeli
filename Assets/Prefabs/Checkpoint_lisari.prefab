@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCheckPoint: {x: 0, y: 0, z: 0}
   check: 0
-  givelives: 1
+  givelives: 0
   amount: 3
 --- !u!212 &21200000
 SpriteRenderer:

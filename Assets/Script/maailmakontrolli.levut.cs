@@ -21,8 +21,9 @@ public partial class maailmakontrolli : MonoBehaviour {
 			levut = new List<string>();
 			tilanne = new List<int> ();
 			aika = new List<float> ();
+			PlayerPrefs.SetString("currmaailma",Application.loadedLevelName);
 			//maailma1
-			if (Application.loadedLevel == 2) {
+			if (Application.loadedLevelName == "maailma1") {
 				
 				levut.Add ("alkupolku");
 				levut.Add ("Ilomaa_1");
@@ -30,6 +31,7 @@ public partial class maailmakontrolli : MonoBehaviour {
 				levut.Add ("Ilomaa_3");
 				levut.Add ("piikkipaikka1");
 				levut.Add ("piikkipaikka2");
+				levut.Add ("maailma2");
 				levut.Add ("alku");
 				levut.Add ("level1");
 				levut.Add ("level2");
@@ -40,17 +42,28 @@ public partial class maailmakontrolli : MonoBehaviour {
 				
 				prefit ();
 			}
+
+			if (Application.loadedLevelName == "maailma2") {
+				levut.Add ("speedmaa_1");
+				
+				prefit ();
+			}
+
 			edellinen = "menu";		
 		
 		}
-		edellinen = "maailma1";
+		edellinen = PlayerPrefs.GetString ("currmaailma");
 
 	}
 
-	public void prefit(){
-		
+	public void prefit(int asd = 0){
+		aika.Clear ();
+		tilanne.Clear ();
+		kuolemat.Clear ();
 		foreach (string k in levut) {
+			if(asd == 1){PlayerPrefs.SetInt(k+"levutilanne",1);}
 			aika.Add (PlayerPrefs.GetFloat (k + "levuscore"));
+
 			if(PlayerPrefs.GetInt (k + "levutilanne") != null){
 				tilanne.Add (PlayerPrefs.GetInt (k + "levutilanne"));}else tilanne.Add (0);
 			kuolemat.Add (PlayerPrefs.GetInt (k + "lives"));

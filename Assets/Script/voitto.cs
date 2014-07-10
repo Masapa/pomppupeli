@@ -38,8 +38,10 @@ public class voitto : MonoBehaviour {
 		int tmp2 = PlayerPrefs.GetInt (Application.loadedLevelName+"levutilanne");
 		tmp2 = 1;
 		PlayerPrefs.SetInt (Application.loadedLevelName+"levutilanne", tmp2);
+		if (GameObject.Find ("maailmat")) {
+			maailmakontrolli maailmat = FindObjectOfType<maailmakontrolli> ();
 
-		Application.LoadLevel ("maailma1");
+			Application.LoadLevel (maailmat.edellinen);}else Application.LoadLevel ("maailma1");
 		}
 
 			

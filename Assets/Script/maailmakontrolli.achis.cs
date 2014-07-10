@@ -29,6 +29,11 @@ public partial class maailmakontrolli : MonoBehaviour {
 										achiget (achipala);
 										etsinelio (0, 0);
 								}
+								
+			if(achipala == 2){
+				prefit (1);
+				Application.LoadLevel("maailma1");
+			}
 
 
 
